@@ -1,14 +1,31 @@
 #!/usr/bin/python3
 import sys
 
-f = open(sys.argv[1])
-num = int(f.readline())
-ans = 1
-if num % 2 == 0:
-    print("{:d}={:d}*2".format(num, num//2))
-    exit()
-for i in range(3, num // 2, 2):
-    if num % i == 0:
-        ans = num // i
-        break
-print("{:d}={:d}*{:d}".format(num, ans, i))
+
+# fn unpack number factorial
+def factors():
+    """
+    function fc to search file to convert number and format n=p*q
+    """
+    try:
+        revfile = sys.argv[1]
+        with open(revfile) as f:
+            for n in f:
+                n = int(n)
+                if n % 2 == 0:
+                        print("{}={}*{}".format(n, n // 2, 2))
+                        continue
+                i = 3
+                while i < n // 2:
+                    if n % i == 0:
+                        print("{}={}*{}".format(n, n // i, i))
+                        break
+                    i = i + 2
+                if i == (n // 2) + 1:
+                    print("{}={}*{}".format(n, n, 1))
+    except (IndexError):
+        pass
+
+
+# autostart
+factors()
