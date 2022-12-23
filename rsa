@@ -2,7 +2,7 @@
 import sys
 
 
-# fn unpack number factorial
+
 def factors():
     """
     function fc to search file to convert number and format n=p*q
