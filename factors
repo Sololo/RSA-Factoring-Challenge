@@ -11,9 +11,18 @@ from math import sqrt
 def factors():
     with open(sys.argv[1]) as x:
         for cn in x:
-            num = int(cn)
+            cn = int(cn)
            if cn % 2 == 0:
-                  
+               print("{}={}*{}".format(cn, cn // 2, 2))
+               continue
+           y = 3
+           while y < cn // 2:
+               if cn % y == 0:
+                   print("{}={}*{}".format(cn, cn // y, y))
+                   break
+               y = y + 2
+            if y == (cn // 2) + 1:
+                print("{}={}*{}".format(cn, cn, 1)
 
 
 factors()
