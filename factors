@@ -5,7 +5,7 @@ from sys import argv
 
 
 def factorize(value):
-    """"print a simple descomposition of an integer > 1"""
+    """ "print a simple descomposition of an integer > 1"""
     i = 2
 
     if value < 2:
@@ -18,6 +18,7 @@ def factorize(value):
     print(value, "<- value-aft")
     print()
 
+
 if len(argv) != 2:
     exit()
 
@@ -26,7 +27,7 @@ try:
         line = file.readline()
 
         while line != "":
-            value = int(line.split('\n')[0])
+            value = int(line.split("\n")[0])
             factorize(value)
             line = file.readline()
 except:
