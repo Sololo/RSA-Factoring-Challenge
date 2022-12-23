@@ -23,6 +23,6 @@ def factors():
                y = y + 2
             if y == (cn // 2) + 1:
                 print("{}={}*{}".format(cn, cn, 1)
-
+       
 
 factors()
