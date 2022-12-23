@@ -9,22 +9,11 @@ from math import sqrt
 
 
 def factors():
-    with open(argv[1]) as x:
-        for line in x:
-            num = int(line)
-            print("{:d}=".format(num), end="")
-            if num % 2 == 0:
-                print("{}*2".format(num // 2))
-                continue
-            sqrtn = int(sqrt(num))
-            if sqrtn % 2 == 0:
-                sqrtn += 1
-            for i in range(3, sqrtn + 1, 2):
-                if num % x == 0:
-                    print("{}*{}".format(x, num // x))
-                    break
-            if num % x != 0:
-                print("{}={}*1".format(num, num))
+    with open(sys.argv[1]) as x:
+        for cn in x:
+            num = int(cn)
+           if cn % 2 == 0:
+                  
 
 
 factors()
